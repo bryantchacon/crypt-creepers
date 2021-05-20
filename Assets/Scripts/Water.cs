@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-    float originalSpeed;
     Player player;
+    float originalSpeed;
     [SerializeField] float speedReductionRatio = 0.5f;
-
-    // Start is called before the first frame update
+        
     void Start()
     {
         player = FindObjectOfType<Player>(); //Al iniciar, el juego busca el game object que sea de tipo Player, o sea, que tenga el script Player y lo obtiene
@@ -19,7 +18,7 @@ public class Water : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            player.speed *= speedReductionRatio; //Indica a la velocidad de player en su script que su velocidad se redujo
+            player.speed *= speedReductionRatio; //Reduce la velocidad de player en su propio script
         }
     }
 
@@ -27,7 +26,7 @@ public class Water : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            player.speed = originalSpeed; //Restaura la velocidad original de player
+            player.speed = originalSpeed; //Restaura la velocidad original del player
         }
     }
 }

@@ -37,12 +37,11 @@ public class ItemSpawner : MonoBehaviour
         }
     }
 
-    /*
-    //Muestra en el editor el radio del spawnRadio
-    private void OnDrawGizmos()
+    /*    
+    private void OnDrawGizmos() //Funcion del sistema para mostrar gizmos. Muestra en el editor el radio del spawnRadio
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, spawnRadio);
+        Gizmos.DrawWireSphere(transform.position, spawnRadio); //De forma esferica, con origen en el game object con este script y de determinado radio
     }
     */
 }

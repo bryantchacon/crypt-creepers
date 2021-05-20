@@ -9,7 +9,7 @@ public class TittleScreenController : MonoBehaviour
 
     public void ClickOnPlayGameButton()
     {
-        AudioSource.PlayClipAtPoint(buttonClip, transform.position);
+        AudioSource.PlayClipAtPoint(buttonClip, transform.position); //El boton emitira un audio al se presionado
         Invoke("LoadGame", 0.5f);
     }
 

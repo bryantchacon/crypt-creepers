@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemySpawnController : MonoBehaviour
 {
-    [SerializeField] GameObject[] enemyPrefab; //Variable de arrays de game objects para referenciar los PREFABS de los enemigos en el editor, es tipo GameObject porque se instanciara todo el game object en si
-    [Range(1, 10)][SerializeField] float spawnRate = 1; //Range limita que se indique que la variable sea menor a 1 y mayor a 10, esto hara que aparezca un slider en el editor
+    [SerializeField] GameObject[] enemyPrefab; //Variable de arrays de game objects para referenciar los PREFABS de los enemigos en el editor, es tipo GameObject porque guardara los enemigos en el
+    [Range(1, 10)][SerializeField] float spawnRate = 1; //Range limita que se indique que la variable sea menor a 1 y mayor a 10, esto hara que aparezca un slider en el editor, range y sus parametros indican que el slider ira del 1 al 10
     
-    void Start() //Al primer frame del juego...
+    void Start()
     {
         StartCoroutine(SpawnNewEnemy()); //Iniciar la coroutina SpawnNewEnemy()
     }

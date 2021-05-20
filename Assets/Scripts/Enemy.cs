@@ -21,14 +21,14 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        Vector2 direction = player.position - transform.position; //Coordenadas para seguir al player
-        transform.position += (Vector3)direction.normalized * enemySpeed * Time.deltaTime; //Velocidad en la que ira(o sea, hacia el player). .normalized hace lo mismo que la siguiente funcion comentada, la cual para usarla se deben comentar estas dos primeras        
+        Vector2 direction = player.position - transform.position; //Indica que seguira al player
+        transform.position += (Vector3)direction.normalized * enemySpeed * Time.deltaTime; //Velocidad en la que ira hacia el player
     }
 
     public void EnemyTakeDamage()
     {
         enemyHealth--;
-        AudioSource.PlayClipAtPoint(impactClip, transform.position);
+        AudioSource.PlayClipAtPoint(impactClip, transform.position); //El enemigo emitira el sonido de impacto
 
         if (enemyHealth <= 0)
         {

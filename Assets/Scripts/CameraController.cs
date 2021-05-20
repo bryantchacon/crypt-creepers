@@ -6,12 +6,12 @@ using Cinemachine;
 public class CameraController : MonoBehaviour
 {
     CinemachineVirtualCamera vCam;
-    CinemachineBasicMultiChannelPerlin noise; //Esta variable Se guardara la sacudida de la camara
+    CinemachineBasicMultiChannelPerlin noise; //Esta variable guarda la sacudida de la camara
     
     void Start()
     {
         vCam = GetComponent<CinemachineVirtualCamera>(); //Obtiene el componente de la camara virtual
-        noise = vCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>(); //Obtiene el componente de la camara virtual que se refiere a la sacudida de la camara
+        noise = vCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>(); //Obtiene el componente de la camara virtual que se refiere a la sacudida de la camara, para esto, se usa la variable vCam por que el componente se obtiene por medio de una instruccion especifica, la cual es GetCinemachineComponent
     }
     
     public void Shake(float duration = 0.1f, float amplitude = 1.5f, float frecuency = 20) //1. En la funcion se indican el tipo y los valores por defecto de los parametros...

@@ -10,5 +10,5 @@ public class PowerUp : MonoBehaviour
         PowerShot
     }
 
-    public PowerUpType powerUpType;
+    public PowerUpType powerUpType; //Para poder usar los elementos de un enum, en la clase siempre debe haber una variable con el mismo tipo de dato que el enum
 }

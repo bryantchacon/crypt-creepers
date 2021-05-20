@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Text healthText;
     [SerializeField] Text timeText;
     [SerializeField] Text finalScoreText;
-    [SerializeField] GameObject gameOverScreen;
+    [SerializeField] GameObject gameOverScreen; //El game object referenciado aqui es un canvas UI
 
     private void Awake()
     {
@@ -20,9 +20,9 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void UpdateUIScore(int newScore)
+    public void UpdateUIScore(int newScore) //Los parametros de una funcion son variables locales, o sea, solo se usaran dentro de esa funcion
     {
-        scoreText.text = newScore.ToString();
+        scoreText.text = newScore.ToString(); //ToString() convierte variables numericas a texto
     }
 
     public void UpdateUIHealth(int newHealth)

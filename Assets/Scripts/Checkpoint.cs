@@ -13,5 +13,5 @@ public class Checkpoint : MonoBehaviour
             Destroy(gameObject, 0.1f); //... el checkpoint se destruye despues de 0.1 segundos
         }
     }
-    //NOTA: Recordar que para que esto funcione el player que es quien se mueve debe tener un rigid body con el Gravity Scale en 0
+    //NOTA: Para que esto funcione el player que es quien se mueve debe tener un rigid body con el Gravity Scale en 0
 }
